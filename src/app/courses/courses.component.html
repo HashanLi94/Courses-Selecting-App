@@ -1,1 +1,55 @@
-<p>courses works!</p>
+<div class="container">
+<!--  free course row-->
+  <div class="row1">
+    <div class="col-md-12">
+      <h2> Free Angular Courses for 2020</h2>
+    </div>
+
+<!--    bodyrow-->
+   <div class="row2">
+     <div class="col-md-12" style="padding: 20px">
+       <ul *ngFor="let course of staticCourses">
+         <li style="font-family: Arial ; font-size: medium"> {{ course }}</li>
+       </ul>
+
+     </div>
+
+
+     <div class="row2">
+       <div class="col-md-12" style="padding: 20px">
+         <h2> Free Angular Courses for 2020</h2>
+         <ul *ngFor="let course of dynamicCourses" >
+           <li style="font-family: Arial ; font-size: medium "> {{ course }}</li>
+         </ul>
+
+       </div>
+
+<!--       registration-->
+       <div class="row3" style="padding: 10px">
+         <div class="col-md-12" style="padding: 20px">
+           <h2> Registration </h2>
+           <form>
+             <label > Name :</label> <br>
+             <input type="text" [(ngModel)]="name" > <br>
+
+             <label> Course Title :</label> <br>
+             <input type="text" [(ngModel)]="courseTitle"> <br>
+
+             <label > email : </label> <br>
+             <input type="email" > <br> <br>
+
+             <button class="btn btn-danger" style="padding: 10px" (click)="onRegButton()"> Register </button>
+
+             <p *ngIf="onRegButton()"> {{ name}} , {{ courseTitle }} , {{ email}} </p>
+
+
+
+
+           </form>
+
+         </div>
+
+
+   </div>
+  </div>
+</div>

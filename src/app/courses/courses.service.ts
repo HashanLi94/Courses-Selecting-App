@@ -5,5 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class CoursesService {
 
-  constructor() { }
+ getStaticCourses() {
+   return ['Starter Course 1', 'Starter Course 2', 'Starter Course 3'];
+ }
+
+ getDynaminCourses(){
+   return ['Advanced Angular Course 1', 'Advanced Angular Course 2', 'Advanced Angular Course 3' ] ;
+ }
+
+
+
 }
