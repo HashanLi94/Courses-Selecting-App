@@ -10,9 +10,11 @@ import {CoursesService} from "./courses.service";
 export class CoursesComponent  {
   staticCourses;
   dynamicCourses;
-  name;
-  courseTitle;
+  name ='';
+  courseTitle= '';
   email ="@gmail.com";
+  status = '';
+  button = true;
 
   constructor(course : CoursesService) {
     this.staticCourses = course.getStaticCourses();
@@ -20,9 +22,8 @@ export class CoursesComponent  {
   }
 
   onRegButton(){
-    return this.name;
-    return this.courseTitle;
-    return this.email
+    return this.status = this.name + ' has registered to ' + this.courseTitle + ' successfully..!!. Your details has sent to the ' + this.email + ' Thank you';
+    return this.button = false;
   }
 
 
